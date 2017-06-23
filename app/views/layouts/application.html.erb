@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+  		<% if current_admin %>
+  		<h1>Welcome! <%= current_admin.email %></h1>
+		<% end %>
     <title>NHack</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
